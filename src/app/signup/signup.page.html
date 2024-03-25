@@ -1,0 +1,77 @@
+
+
+<ion-content [fullscreen]="true">
+
+  <div class="wrapper">
+
+    <div class="heading">Create a New Account</div>
+
+    <form novalidate (ngSubmit)="register()" [formGroup]="Registerform">
+
+      <ion-item lines="none">
+        <ion-input type="text" placeholder="Enter Name" [(ngModel)]='user.name' formControlName="name"></ion-input>
+      </ion-item>
+
+      <div class="errorMessage" *ngIf="( Registerform.get('name').hasError('minlength') || Registerform.get('name').hasError('required') ) && Registerform.get('name').touched">
+        <div class="error" *ngIf="Registerform.get('name').hasError('required') && Registerform.get('name').touched">
+          * Please Enter your Name
+        </div>
+      </div>
+
+
+  
+      <ion-item lines="none">
+        <ion-input type="email" placeholder="Enter Email" [(ngModel)]='user.email' formControlName="email"></ion-input>
+      </ion-item>
+      
+      <div class="errorMessage" no-lines *ngIf="( Registerform.get('email').hasError('minlength') || Registerform.get('email').hasError('pattern') ||Registerform.get('email').hasError('required') ) && Registerform.get('email').touched">
+        <div class="error" *ngIf="Registerform.get('email').hasError('required') && Registerform.get('email').touched">
+          * Please Enter your email
+        </div>
+        <div class="error" *ngIf="Registerform.get('email').hasError('pattern') && Registerform.get('email').touched">
+          * Email address invalid
+        </div>
+      </div>
+
+
+
+      <ion-item lines="none">
+        <ion-input type="password" placeholder="Enter Password" [(ngModel)]='user.password' formControlName="password"></ion-input>
+      </ion-item>
+
+      
+				<div class="errorMessage" no-lines *ngIf="( Registerform.get('password').hasError('minlength') || 
+				Registerform.get('password').hasError('pattern') ||
+				Registerform.get('password').hasError('maxlength') ||
+				Registerform.get('password').hasError('required') ) && Registerform.get('password').touched">
+					<div class="error" *ngIf="Registerform.get('password').hasError('required') && Registerform.get('password').touched">
+					  * Please Enter your password
+					</div>
+					<div class="error" *ngIf="Registerform.get('password').hasError('pattern') && Registerform.get('password').touched">
+					  * Password having at least 1 uppercase, 1 digit and 1 special character
+					</div>
+					<div class="error" *ngIf="Registerform.get('password').hasError('minlength') && Registerform.get('password').touched">
+					  * Minimum 8 characters
+					</div>
+					<div class="error" *ngIf="Registerform.get('password').hasError('maxlength') && Registerform.get('password').touched">
+					  * Maximum 12 characters
+					</div>
+				</div>
+
+
+      <app-btn title="Sign Up" [state]="signingIn" [form]="Registerform"></app-btn>
+  
+  
+  
+    </form>
+  
+  </div>
+  
+</ion-content>
+
+
+<ion-footer class="ion-no-border">
+  <div class="textFooter" (click)="gotoSignIn()">
+    Already have an account? Sign In
+  </div>
+</ion-footer>

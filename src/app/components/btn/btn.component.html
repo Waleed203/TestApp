@@ -1,0 +1,18 @@
+<div class="btnDiv">
+  <ion-button type="submit" [disabled]='form.invalid'>
+    <div class="signingInNow" *ngIf="!state">
+      <span *ngIf="!state">{{ title }}</span>
+      <ion-icon style="font-size: 20px;" *ngIf="!state" name="arrow-forward"></ion-icon>
+    </div>
+    
+
+    <div class="signingInNow" *ngIf="state">
+      <span *ngIf="state">
+        <span *ngIf="title == 'Sign In' ">Signing In...</span>
+        <span *ngIf="title == 'Sign Up' ">Signing Up...</span>
+      </span>
+      <ion-spinner *ngIf="state"></ion-spinner>
+    </div>
+  </ion-button>
+
+</div>

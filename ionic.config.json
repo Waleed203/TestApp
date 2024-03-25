@@ -1,0 +1,7 @@
+{
+  "name": "PakSales",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

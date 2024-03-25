@@ -1,0 +1,44 @@
+
+<app-header title="List of Characters"></app-header>
+
+<ion-content [fullscreen]="true">
+  <div class="wrapper">
+
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content
+      pullingText="Fetch Products"
+      refreshingSpinner="circles"></ion-refresher-content>
+    </ion-refresher>
+
+    <ion-spinner name="crescent" *ngIf="!populated"></ion-spinner>
+
+    <ion-list *ngIf="populated">
+
+      <div class="main" *ngFor="let character of characters" (click)="gotoCharacter(character)">
+        <div class="left">
+          <img [src]="character.image" />
+        </div>
+        <div class="right">
+          <div> {{ character.name }} </div>
+          <div><b>Species:</b> {{ character.species }} </div>
+          <div><b>Status:</b>  {{ character.status }} </div>
+          <div><b>Location:</b>  {{ character.location.name }} </div>
+        </div>
+      </div>
+    </ion-list>
+  
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="crescent"
+        loadingText="Fetching Characters">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+
+
+
+  <app-internet [openThis]="openThis"></app-internet>
+
+
+
+</ion-content>
