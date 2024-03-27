@@ -1,20 +1,20 @@
-.btnDiv{
-	width: 100%;
-	margin: 5% auto;
+.btnDiv {
+  width: 100%;
+  margin: 5% auto;
 }
-.btnDiv ion-button{
-	width: 100%;
-	--background: #4A53D8;
-	color: #fff;
-	font-weight: bold;
-	font-family: 'Poppins', sans-serif;
-	text-transform: capitalize;
-	height: 60px;
-    --border-radius: 5px;
+.btnDiv ion-button {
+  width: 100%;
+  --background: #4a53d8;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  height: 60px;
+  --border-radius: 5px;
 }
-.signingInNow{
-	width: 100%;
-	display: flex;
-    justify-content: space-between;
-    align-items: center;
+.signingInNow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

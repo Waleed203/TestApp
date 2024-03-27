@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { SignupPageRoutingModule } from './signup-routing.module';
+import { SignupPageRoutingModule } from "./signup-routing.module";
 
-import { SignupPage } from './signup.page';
-import { SharedModule } from '../components/shared.module';
+import { SignupPage } from "./signup.page";
+import { SharedModule } from "../components/shared.module";
 
 @NgModule({
   imports: [
@@ -16,8 +16,8 @@ import { SharedModule } from '../components/shared.module';
     IonicModule,
     ReactiveFormsModule,
     SharedModule,
-    SignupPageRoutingModule
+    SignupPageRoutingModule,
   ],
-  declarations: [SignupPage]
+  declarations: [SignupPage],
 })
 export class SignupPageModule {}

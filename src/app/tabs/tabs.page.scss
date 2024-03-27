@@ -1,15 +1,15 @@
 ion-tab-bar {
-    --background: var(--toolbar-background-color);
+  --background: var(--toolbar-background-color);
 }
 ion-tab-button {
-    --color-selected: #fff!important;
-    --color: #222;
-    
-    ion-icon {
-        color: #fff;
-    }
+  --color-selected: #fff !important;
+  --color: #222;
 
-    ion-label {
-        color: #fff;
-    }
+  ion-icon {
+    color: #fff;
+  }
+
+  ion-label {
+    color: #fff;
+  }
 }

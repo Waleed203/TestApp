@@ -1,16 +1,16 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, Input, OnInit, inject } from "@angular/core";
+import { ModalController } from "@ionic/angular";
 
 @Component({
-  selector: 'app-internet',
-  templateUrl: './internet.component.html',
-  styleUrls: ['./internet.component.scss'],
+  selector: "app-internet",
+  templateUrl: "./internet.component.html",
+  styleUrls: ["./internet.component.scss"],
 })
-export class InternetComponent  implements OnInit {
+export class InternetComponent implements OnInit {
   @Input() openThis = false;
   modalCtrl = inject(ModalController);
 
-  constructor() { }
+  constructor() {}
 
   close() {
     this.openThis = false;
@@ -18,5 +18,4 @@ export class InternetComponent  implements OnInit {
   }
 
   ngOnInit() {}
-
 }

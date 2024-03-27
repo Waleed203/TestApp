@@ -7,8 +7,8 @@ import { HeaderComponent } from "./header/header.component";
 import { InternetComponent } from "./internet/internet.component";
 
 @NgModule({
-    declarations: [HeaderComponent, BtnComponent, InternetComponent],
-    imports: [IonicModule, CommonModule, FormsModule],
-    exports: [HeaderComponent, BtnComponent, InternetComponent],
+  declarations: [HeaderComponent, BtnComponent, InternetComponent],
+  imports: [IonicModule, CommonModule, FormsModule],
+  exports: [HeaderComponent, BtnComponent, InternetComponent],
 })
-export class SharedModule{}
+export class SharedModule {}

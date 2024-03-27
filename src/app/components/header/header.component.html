@@ -1,21 +1,25 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tabs/tabs1" *ngIf="showBack"></ion-back-button>
+      <ion-back-button
+        defaultHref="/tabs/tabs1"
+        *ngIf="showBack"
+      ></ion-back-button>
     </ion-buttons>
 
     <ion-title>{{ title }}</ion-title>
 
-    <ion-buttons slot="end" class="endButtons" (click)="logout()" *ngIf="title == 'List of Characters' ">
+    <ion-buttons
+      slot="end"
+      class="endButtons"
+      (click)="logout()"
+      *ngIf="title == 'List of Characters'"
+    >
       <ion-icon name="log-out-outline"></ion-icon>
     </ion-buttons>
-
-
 
     <!-- <ion-buttons slot="end" class="endButtons" *ngIf="title == 'Profile' ">
       <ion-icon name="settings-outline" (click)="openSettings()"></ion-icon>
     </ion-buttons> -->
-
   </ion-toolbar>
 </ion-header>

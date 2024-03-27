@@ -1,9 +1,7 @@
-
 <!-- <app-header [title]="character.name" [showBack]="showBack"></app-header> -->
 
 <ion-content [fullscreen]="true">
   <div class="imageContainer">
-
     <div class="backBtn" (click)="goback()">
       <ion-icon name="arrow-back" style="color: #222"></ion-icon>
     </div>
@@ -17,16 +15,14 @@
 
   <div class="wrapper">
     <div class="details">
-      <div class="heading">
-        {{ character.name }}
-      </div>
+      <div class="heading">{{ character.name }}</div>
 
       <div class="row">
+        <div class="info">{{ character.species }} - {{ character.status }}</div>
         <div class="info">
-          {{ character.species }} - {{ character.status }}
-        </div>
-        <div class="info">
-          <ion-icon [name]="character.gender == 'Female' ? 'female' : 'male'"></ion-icon>
+          <ion-icon
+            [name]="character.gender == 'Female' ? 'female' : 'male'"
+          ></ion-icon>
           {{ character.gender }}
         </div>
       </div>
@@ -36,21 +32,16 @@
         {{ character.location.name }}
       </div>
 
-
       <div class="text">Episodes</div>
 
       <ion-spinner name="crescent" *ngIf="!episodesPopulated"></ion-spinner>
 
       <ion-item *ngFor="let episode of character.episodesInfo">
         <ion-label>{{ episode.episode }}</ion-label>
-        <ion-label style="text-align: right;">{{ episode.name }}</ion-label>
+        <ion-label style="text-align: right">{{ episode.name }}</ion-label>
       </ion-item>
-
-
     </div>
   </div>
 
-
   <app-internet [openThis]="openThis"></app-internet>
-
 </ion-content>

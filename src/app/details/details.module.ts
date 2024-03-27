@@ -1,13 +1,13 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { DetailsPageRoutingModule } from './details-routing.module';
+import { DetailsPageRoutingModule } from "./details-routing.module";
 
-import { DetailsPage } from './details.page';
-import { SharedModule } from '../components/shared.module';
+import { DetailsPage } from "./details.page";
+import { SharedModule } from "../components/shared.module";
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -16,8 +16,8 @@ import { SharedModule } from '../components/shared.module';
     FormsModule,
     IonicModule,
     SharedModule,
-    DetailsPageRoutingModule
+    DetailsPageRoutingModule,
   ],
-  declarations: [DetailsPage]
+  declarations: [DetailsPage],
 })
 export class DetailsPageModule {}

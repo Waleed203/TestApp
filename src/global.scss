@@ -25,59 +25,56 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+.loadingdiv .loading-wrapper.sc-ion-loading-md {
+  padding-inline-end: 0 !important;
+  padding-inline-start: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  box-shadow: none !important;
 
-.loadingdiv .loading-wrapper.sc-ion-loading-md{
-	padding-inline-end: 0!important;
-	padding-inline-start: 0!important;
-	padding-top: 0!important;
-	padding-bottom: 0!important;
-	box-shadow: none!important;
-  
-	background: #fff;
-	width: 20%!important;
-	height: 70px;
-	border-radius: 10px;
-  }
-
-.selection-sheet {
-	.action-sheet-title.sc-ion-action-sheet-md {
-		color: #000;
-		font-weight: bold;
-		font-size: 20px;
-	}
-
-	.action-sheet-button-inner.sc-ion-action-sheet-md {
-		color: #000;
-	}
+  background: #fff;
+  width: 20% !important;
+  height: 70px;
+  border-radius: 10px;
 }
 
+.selection-sheet {
+  .action-sheet-title.sc-ion-action-sheet-md {
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+  }
 
-.input-alert{
-	.alert-wrapper.sc-ion-alert-md{
-		border-radius:20px;
-	}
+  .action-sheet-button-inner.sc-ion-action-sheet-md {
+    color: #000;
+  }
+}
 
-	.alert-button-inner.sc-ion-alert-md {
+.input-alert {
+  .alert-wrapper.sc-ion-alert-md {
+    border-radius: 20px;
+  }
 
-		justify-content: center;
-	}
+  .alert-button-inner.sc-ion-alert-md {
+    justify-content: center;
+  }
 
-	.alert-button.sc-ion-alert-md{
-		margin-inline-end: 0px;
-		width:50%;
-		border-radius:0px;
-	}
+  .alert-button.sc-ion-alert-md {
+    margin-inline-end: 0px;
+    width: 50%;
+    border-radius: 0px;
+  }
 
-	.alert-button-group.sc-ion-alert-md {
-		padding-top: 0px;
-		padding-left: 0px;
-		padding-right: 0px;
+  .alert-button-group.sc-ion-alert-md {
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 
-		flex-wrap: inherit;
-		border-top: 2px solid #efefef;
-	}
+    flex-wrap: inherit;
+    border-top: 2px solid #efefef;
+  }
 
-	.alert-title.sc-ion-alert-md{
-		font-size: 18px;
-	}
+  .alert-title.sc-ion-alert-md {
+    font-size: 18px;
+  }
 }

@@ -1,58 +1,75 @@
-
-
 <ion-content [fullscreen]="true">
-
   <div class="wrapper" *ngIf="populated">
-
     <div class="heading">Sign In to continue</div>
 
     <form novalidate (ngSubmit)="login()" [formGroup]="Loginform">
-  
       <ion-item lines="none">
-        <ion-input type="email" placeholder="Enter Email" [(ngModel)]='user.email' formControlName="email"></ion-input>
+        <ion-input
+          type="email"
+          placeholder="Enter Email"
+          [(ngModel)]="user.email"
+          formControlName="email"
+        ></ion-input>
       </ion-item>
-      
-      <div class="errorMessage" no-lines *ngIf="( Loginform.get('email').hasError('minlength') || Loginform.get('email').hasError('pattern') ||Loginform.get('email').hasError('required') ) && Loginform.get('email').touched">
-        <div class="error" *ngIf="Loginform.get('email').hasError('required') && Loginform.get('email').touched">
+
+      <div
+        class="errorMessage"
+        no-lines
+        *ngIf="( Loginform.get('email').hasError('minlength') || Loginform.get('email').hasError('pattern') ||Loginform.get('email').hasError('required') ) && Loginform.get('email').touched"
+      >
+        <div
+          class="error"
+          *ngIf="Loginform.get('email').hasError('required') && Loginform.get('email').touched"
+        >
           * Please Enter your email
         </div>
-        <div class="error" *ngIf="Loginform.get('email').hasError('pattern') && Loginform.get('email').touched">
+        <div
+          class="error"
+          *ngIf="Loginform.get('email').hasError('pattern') && Loginform.get('email').touched"
+        >
           * Email address invalid
         </div>
       </div>
 
-
-
       <ion-item lines="none">
-        <ion-input type="password" placeholder="Enter Password" [(ngModel)]='user.password' formControlName="password"></ion-input>
+        <ion-input
+          type="password"
+          placeholder="Enter Password"
+          [(ngModel)]="user.password"
+          formControlName="password"
+        ></ion-input>
       </ion-item>
 
-      <div class="errorMessage" no-lines *ngIf="( Loginform.get('password').hasError('minlength') || Loginform.get('password').hasError('maxlength') ||Loginform.get('password').hasError('required') ) && Loginform.get('password').touched">
-        <div class="error" *ngIf="Loginform.get('password').hasError('required') && Loginform.get('password').touched">
+      <div
+        class="errorMessage"
+        no-lines
+        *ngIf="( Loginform.get('password').hasError('minlength') || Loginform.get('password').hasError('maxlength') ||Loginform.get('password').hasError('required') ) && Loginform.get('password').touched"
+      >
+        <div
+          class="error"
+          *ngIf="Loginform.get('password').hasError('required') && Loginform.get('password').touched"
+        >
           * Please Enter your password
         </div>
-        <div class="error" *ngIf="Loginform.get('password').hasError('minlength') && Loginform.get('password').touched">
+        <div
+          class="error"
+          *ngIf="Loginform.get('password').hasError('minlength') && Loginform.get('password').touched"
+        >
           * Minimum 6 characters
         </div>
-        <div class="error" *ngIf="Loginform.get('password').hasError('maxlength') && Loginform.get('password').touched">
+        <div
+          class="error"
+          *ngIf="Loginform.get('password').hasError('maxlength') && Loginform.get('password').touched"
+        >
           * Maximum 12 characters
         </div>
       </div>
 
-
       <app-btn title="Sign In" [state]="signingIn" [form]="Loginform"></app-btn>
-  
-  
-  
     </form>
-  
   </div>
-  
 </ion-content>
 
-
 <ion-footer class="ion-no-border">
-  <div class="textFooter" (click)="gotoSignUp()">
-    Create a new account
-  </div>
+  <div class="textFooter" (click)="gotoSignUp()">Create a new account</div>
 </ion-footer>

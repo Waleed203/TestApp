@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
-
-import { GlobalService } from './global.service';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Storage } from "@ionic/storage-angular";
+import { GlobalService } from "./global.service";
 
 describe('GlobalService', () => {
   let service: GlobalService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(GlobalService);
+    service = new GlobalService();
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-});
+
+})

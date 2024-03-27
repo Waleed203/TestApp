@@ -1,12 +1,12 @@
 ion-toolbar {
-    --background: var(--toolbar-background-color);
-    color: var(--light-mode-toolbar-text-color);
+  --background: var(--toolbar-background-color);
+  color: var(--light-mode-toolbar-text-color);
 }
 .endButtons {
-    margin-right: 20px;
+  margin-right: 20px;
 
-    ion-icon {
-        color: var(--light-mode-toolbar-text-color);
-        font-size: 23px;
-    }
+  ion-icon {
+    color: var(--light-mode-toolbar-text-color);
+    font-size: 23px;
+  }
 }

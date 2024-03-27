@@ -1,11 +1,11 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-  appId: 'com.testApp.beaconhouse',
-  appName: 'Test',
-  webDir: 'www',
+  appId: "com.testApp.beaconhouse",
+  appName: "Test",
+  webDir: "www",
   server: {
-    androidScheme: 'https'
+    androidScheme: "https",
   },
   plugins: {
     SplashScreen: {

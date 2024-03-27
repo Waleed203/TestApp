@@ -1,17 +1,14 @@
-import { Injectable } from '@angular/core';
-import { Network } from '@capacitor/network';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { Network } from "@capacitor/network";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class InternetService {
-
   private _internetState$ = new BehaviorSubject<boolean>(true);
 
-  constructor() {
-    
-  }
+  constructor() {}
 
   notify(status) {
     this.updateInternetState(status.connected);
@@ -21,21 +18,20 @@ export class InternetService {
     return this._internetState$.asObservable();
   }
 
-  updateInternetState(value){
+  updateInternetState(value) {
     this._internetState$.next(value);
   }
 
   checkInternet() {
-    Network.addListener('networkStatusChange', status => {
-      console.log('Network status changed', status);
+    Network.addListener("networkStatusChange", (status) => {
+      console.log("Network status changed", status);
       this.notify(status);
     });
-    
+
     const logCurrentNetworkStatus = async () => {
       const status = await Network.getStatus();
-    
-      console.log('Network status:', status);
+
+      console.log("Network status:", status);
     };
   }
-  
 }
